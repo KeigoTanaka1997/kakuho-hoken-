@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kakuho1</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+<link rel="stylesheet" href="stylesheet.scss">
+<meta name="veiwport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="responsive.scss">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <SCRIPT language="JavaScript">
+    <!--
+    // 項目の合計を計算
+    function ttlVal() {
+      chn = 21; // ラジオボタンとチェックボックスの総数
+      ttl = 0;
+      for(i=0; i<chn; i++) {
+        if(document.nForm.elements[i].checked) {
+          ttl += eval(document.nForm.elements[i].value);
+        }
+      }
+      document.nForm.result.value = ttl;
+    }
+
+    </SCRIPT>
+
+  </head>
+
+  <body>
+   <header>
+      <div class="container">
+        <div class="header-left">
+          <a href="/top"><img class="logo" src="https://fanblogs.jp/xyzzyxxyzzyxxyz/file/undefined/KAKUHO.png?2018-07-07%2017:23:26"></a>
+        </div>
+        <div class="header-right">
+          <a href="/toB" class="login1">FPの方へ</a>
+        </div>
+        <div class="header-right">
+          <a href="/fp" class="login1">専門家とは?</a>
+        </div>
+        <div class="header-right">
+          <a href="/fp#fee" class="login">料金体系</a>
+        </div>
+        <div class="header-right">
+          <a href="#flow" class="login2">ご利用の流れ</a>
+        </div>
+
+      </div>
+    </header>
+    <div class="all">
+
+
+		<div class="cost-wrapper">
+      <div class="box25">
+          <span class="box-title1"><div class="coheadings">
+            <h2>子育てプランシミュレーション</h2>
+          </div></span>
+          <p>公立か私立か、またどのタイミングで受験するかによってかかる費用に大きく差があります。
+    どれくらいの費用になるのかプランをみてみましょう</p>
+      </div>
+			</div>
+
+
+		<div class="sindan1">
+
+<!--教育費計算コード-->
+
+<div class="contents02">
+
+<FORM name="nForm">
+<!-- /// -->
+<div class="calculate">
+  <div class="sub-title"><h3>幼稚園(3年間)</h3></div>
+  <div class="choice">
+    <ul class="rd">
+      <li><INPUT type="radio" name="ch1" value="702000" id=you1  checked><label for="you1" class="btnr" >公立:702,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch1" value="1446000" id=you2><label for="you2" class="btnr">私立：1,446,000円</label></li>
+      <li><INPUT type="radio" name="ch1" value="0" id="you3"><label for="you3" class="btnr">計算しない</label></li>
+    </ul>
+</div>
+
+</div>
+<div class="arrow">
+
+</div>
+
+<div class="calculate">
+  <div class="sub-title"><h3>小学校(6年間)</h3></div>
+  <div class="choice">
+    <ul class="rd">
+      <li><INPUT type="radio" name="ch2" value="1932000" id="sho1" checked><label for="sho1" class="btnr">公立：1,932,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch2" value="9168000" id="sho2"><label for="sho2" class="btnr">私立：9,168,000円</label></li>
+      <li><INPUT type="radio" name="ch2" value="0" id="sho3"><label for="sho3" class="btnr">計算しない</label></li>
+    </ul>
+
+
+
+
+ <!--
+    <input type="radio" name="ch2" id="select1" value="1834842" checked="">
+    <label for="select1">公立<br>¥1,834,842</label>
+    <input type="radio" name="ch2" id="select2" value="8534142">
+    <label for="select2">私立<br>¥8,534,142</label>
+    <input type="radio" name="ch2" id="select3" value="0">
+    <label for="select3">計算しない</label>
+-->
+</div>
+
+</div>
+<div class="arrow"></div>
+<div class="calculate1">
+  <div class="sub-title1"><h3>塾・受験費用</h3></div>
+  <div class="choice">
+    <ul class="rd1">
+      <li><INPUT type="radio" name="ch3" value="1265000" id="juken1" checked><label for="juken1" class="btnr">塾行く：1,265,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch3" value="0" id="juken2"><label for="juken2" class="btnr">塾に行かない場合</label></li>
+    </ul>
+<!--日能研5年生~参考-->
+
+
+    <!--
+    <input type="radio" name="ch3" id="select1" value="217000" checked="">
+    <label for="select1">中学受験塾に通う<br>¥217,000</label>
+    <input type="radio" name="ch3" id="select2" value="0">
+    <label for="select2">通わない</label>
+  -->
+    </div>
+</div>
+
+<div class="arrow">
+
+</div>
+<div class="calculate">
+  <div class="sub-title"><h3>中学校(3年間)</h3></div>
+  <div class="choice">
+    <ul class="rd">
+      <li><INPUT type="radio" name="ch4" value="1437000" id="chu1" checked><label for="chu1" class="btnr">公立：1,437,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch4" value="3981000" id="chu2"><label for="chu2" class="btnr">私立：3,981,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch4" value="0" id="chu3"><label for="chu3" class="btnr">計算しない</label></li>
+    </ul>
+
+
+
+
+    <!--
+    <input type="radio" name="ch4" id="select1" value="1351020" checked="">
+    <label for="select1">公立<br>¥1,351,020</label>
+    <input type="radio" name="ch4" id="select2" value="3885468">
+    <label for="select2">私立<br>¥3,885,468</label>
+    <input type="radio" name="ch4" id="select3" value="0">
+    <label for="select3">計算しない</label>
+  -->
+  </div>
+
+</div>
+<div class="arrow">
+
+</div>
+<div class="calculate1">
+  <div class="sub-title1"><h3>予備校・受験費用</h3></div>
+  <div class="choice">
+    <ul class="rd1">
+      <li><INPUT type="radio" name="ch5" value="762000" id="juken3" checked><label for="juken3" class="btnr">塾行く：762,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch5" value="0" id="juken4"><label for="juken4" class="btnr">塾に行かない場合</label></li>
+    </ul>
+<!--早アカ参考２、3年生(x1.5)-->
+
+
+  <!--
+    <input type="radio" name="ch5" id="select1" value="217000" checked="">
+    <label for="select1">予備校に通う<br>¥217,000</label>
+    <input type="radio" name="ch5" id="select3" value="0">
+    <label for="select3">予備校に行かない場合</label>
+  -->
+    </div>
+</div>
+
+<div class="arrow">
+
+</div>
+<div class="calculate">
+  <div class="sub-title"><h3>高校(3年間)</h3>
+  <div class="choice">
+    <ul class="rd">
+      <li><INPUT type="radio" name="ch6" value="1353000" id="kou1" checked><label for="kou1" class="btnr">公立：1,353,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch6" value="3120000" id="kou2"><label for="kou2" class="btnr">私立：3,120,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch6" value="0" id="kou3"><label for="kou3" class="btnr">計算しない</label></li>
+    </ul>
+
+
+
+
+  <!--
+    <input type="radio" name="ch6" id="select1" value="1159317" checked="">
+    <label for="select1">公立<br>¥1,159,317</label>
+    <input type="radio" name="ch6" id="select2" value="2900448">
+    <label for="select2">私立<br>¥2,900,448</label>
+    <input type="radio" name="ch6" id="select3" value="0">
+    <label for="select3">計算しない</label>
+-->
+  </div></div>
+
+</div>
+<div class="arrow">
+
+</div>
+<div class="calculate1">
+  <div class="sub-title1"><h3>予備校・受験費用</h3></div>
+  <div class="choice">
+    <ul class="rd1">
+      <li><INPUT type="radio" name="ch7" value="1232000" id="juken5" checked><label for="juken5" class="btnr">塾行く:1,232,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch7" value="0" id="juken6"><label for="juken6" class="btnr">塾に行かない場合</label></li>
+    </ul>
+<!--大手平均２、３平均(x1.5)参考-->
+
+  <!--
+    <input type="radio" name="s3" id="select1" value="217000" checked="">
+    <label for="select1">予備校に通う<br>¥217,000</label>
+    <input type="radio" name="s3" id="select3" value="0">
+    <label for="select3">予備校に行かない場合</label>
+  -->
+    </div>
+</div>
+
+<div class="arrow">
+
+</div>
+<div class="calculate">
+  <div class="sub-title"><h3>大学(4年間)</h3></div>
+  <div class="choice">
+    <ul class="rd">
+      <li><INPUT type="radio" name="ch8" value="2425000" id="dai1" checked><label for="dai1" class="btnr">国立：2,425,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch8" value="3899000" id="dai2"><label for="dai2" class="btnr">私立文系：3,899,000円</label><br /></li>
+      <li><INPUT type="radio" name="ch8" value="5304000" id="dai3"><label for="dai3" class="btnr">私立理系：5,304,000円</label></li>
+    </ul>
+
+
+
+  <!--
+    <input type="radio" name="s3" id="select1" value="5184000" checked="">
+    <label for="select1">公立<br>¥5,184,000</label>
+    <input type="radio" name="s3" id="select2" value="6908000" checked="">
+    <label for="select1">公立<br>¥6,908,000</label>
+    <input type="radio" name="s3" id="select3" value="8125000">
+    <label for="select2">私立<br>¥8,125,000</label>
+    <input type="radio" name="s3" id="select4" value="0">
+    <label for="select3">計算しない</label>
+  -->
+</div>
+
+
+</div>
+
+
+<!--結果ボタン -->
+  <div class="font_quotation">
+    <p>[出典]<br />
+    文部科学省「平成28年度子どもの学習費調査」<br />
+    日本政策金融公庫「平成29年教育費負担の実態調査」
+       </p>
+  </div>
+
+</div>
+		</div>
+
+    <div class="keisan-wrapper">
+      <p><INPUT type="button" value="総額を計算する" onClick="ttlVal()" ></p>
+
+    </div>
+    <div class="result-wrapper1">
+      <div class="total">
+
+        <h2>総額費用: 約<INPUT type="text" name="result" size="15">万円</h2>
+      </div>
+      </FORM>
+    </div>
+    <div class="results-wrapper1">
+
+      <div class="onepoint"><span class="title-onepoint">ワンポイントアドバイス</span><p>お子さんのしたいことをできる環境を整えたいものですが、住宅や老後費用もあり大変ですよね。そこで、資金を貯める際に大きな削減効果をもたらすことができるものの１つが保険の見直しです。保険の見直しからかしこく捻出してみましょう！</p>
+</div>
+
+
+			<!--<div class="advice1-wrapper">
+
+				<p>教育費用は。
+          また、資金を貯める上で大きな削減効果をもたらすことができるものの１つが保険の見直しです。保険の見直しからかしこく捻出してみましょう！</p>
+
+			</div>-->
+
+			</div>
+
+
+
+
+
+<div class="message-wrapper">
+  <div class="container">
+    <h2>住宅ローン・資産運用・家計・老後のご相談も受付中！！</h2>
+    <span class="btn message">
+      <img src="https://fanblogs.jp/xyzzyxxyzzyxxyz/file/undefined/icons8-line-48.png?2018-07-22%2015:34:09" alt="">
+      <a href="/chat">今すぐLINEで無料相談</a>
+    </span>
+  </div>
+
+</div>
+</div>
+</div>
+<div class="footer">
+  <a href="/top"> <img class="footer-logo" src="https://fanblogs.jp/xyzzyxxyzzyxxyz/file/undefined/KAKUHO.png?2018-07-07%2017:23:26"></a>
+  <div class="footer-list">
+    <ul>
+      <li>
+        <a href="/managers">会社概要</a>
+      </li>
+      <li>
+        <a href="/privacy">プライバシーポリシー</a>
+      </li>
+      <li>
+        <a href="/riyokiyaku">利用規約</a>
+      </li>
+      <li>
+        <a href="https://tayori.com/form/69e666c4479b7cead777e0399eb1cff19cc58090">お問い合わせ</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+  </body>
+</html>
